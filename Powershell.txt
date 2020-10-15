@@ -1,0 +1,52 @@
+Powershell: System.Management.Automation.dll - > .Net Framwork Codes compiled in to assemblies - Just in time compiler
+
+PowerShell is a task automation and configuration management framework from Microsoft, consisting of a command-line shell and the associated scripting language. - Wiki
+
+ - Powershell Ver-Noun based Cmdlet
+ - Powershell return everything as object
+ - Powershell has
+
+	aliases - 
+	cmdlets - 
+	operators - 
+	providers - powershell providers are third party or Ms to facilitate complex or dynamic module to work with PS. these are consider as drives. can cd.. in to it ->cd HKLM:
+	statements - break,continue..for.foreach..
+	types - data type
+	variables - Store value For automatic vaiables https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-7
+ 
+PowerShell cmdlets
+
+get-command get-process -syntax
+
+A list of verbs and nouns can be found with the get-command and group-object cmdlets:
+
+get-command | group-object verb | sort-object count
+get-command | group-object noun | sort-object count
+
+cmdlets can be searched by noun or verb name with the get-command cmdlet:
+
+get-command -verb import
+get-command -noun csv
+
+The parameters and their aliases can be shown via the get-command cmdlet:
+(get-command get-command).parameters.values | select-object name,aliases
+
+
+Common parameters.
+
+A few parameters, so-called common parameters, are available for any cmdlet:
+
+-debug (db)
+-errorAction (ea)
+-errorVariable (ev)
+-informationAction (infa)
+-informationVariable (iv)
+-outVariable (ov)
+-outBuffer (ob)
+-pipelineVariable (pv)
+-verbose (vb)
+-warningAction (wa)
+-warningVariable (wv)
+
+
+ 
